@@ -1,4 +1,4 @@
-import time
+﻿import time
 
 h = -1
 r = -1
@@ -16,7 +16,7 @@ def overtime_pay(h,r):
 def normal_pay(h, r):   
 	return 40*r       
 #Can't quite figure out how to fix this while loop
-while h < 0 | r < 0:
+while (h < 0) or (r < 0):
    
     for i in range(0,3):
         attempts = attempts + 1
