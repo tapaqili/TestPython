@@ -11,11 +11,15 @@ def stop():
     #quit()
     exit()
 
-def overtime_pay(h,r):
-	return 40*r + (h-40)*1.5*r
-	
-def normal_pay(h, r):   
-	return 40*r       
+def computepay(h,r):
+    gross_pay = 0.0
+    if (h > 40):
+        gross_pay = 40*r + (h-40)*1.5*r
+    else:
+        gross_pay = 40*r
+        
+    return gross_pay  
+
 #Can't quite figure out how to fix this while loop
 while (h < 0) or (r < 0):
    
@@ -49,9 +53,5 @@ while (h < 0) or (r < 0):
               else:
                   print "Please enter a numerical value" 
    
-if (h > 40):
-    gross_pay = overtime_pay(h,r)
-    print gross_pay   
-else:
-    gross_pay = normal_pay(h,r)
-    print gross_pay 
+pay = computepay(h,r)
+print pay
