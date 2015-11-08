@@ -18,7 +18,7 @@ def normal_pay(h, r):
 #Can't quite figure out how to fix this while loop
 while (h < 0) or (r < 0):
    
-    for i in range(0,3):
+    #for i in range(0,3):
         attempts = attempts + 1
         try:
             hrs = raw_input("Enter Hours:")
@@ -27,7 +27,8 @@ while (h < 0) or (r < 0):
                if (attempts > 2):stop()
                else:
                    print "Please enter a number 0 or greater"
-                   break 	 
+                   continue
+                   #break 	 
 
             rate = raw_input("Enter Rate:")
             r = float(rate)    
@@ -35,7 +36,8 @@ while (h < 0) or (r < 0):
                if (attempts > 2):stop()
                else:
                    print "Please enter a number 0 or greater"
-                   break
+                   continue
+                   #break
 
         except: 	
               h = -1
