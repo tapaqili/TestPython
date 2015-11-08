@@ -8,7 +8,8 @@ attempts = 0
 def stop():
     print "Too many failed attempts...exiting"
     time.sleep(5)
-    quit()
+    #quit()
+    exit()
 
 def overtime_pay(h,r):
 	return 40*r + (h-40)*1.5*r
@@ -24,7 +25,9 @@ while (h < 0) or (r < 0):
             hrs = raw_input("Enter Hours:")
             h = float(hrs)
             if (h < 0):     
-               if (attempts > 2):stop()
+               if (attempts > 2):
+                   stop()
+                   #print "why are we here"
                else:
                    print "Please enter a number 0 or greater"
                    continue
