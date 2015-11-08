@@ -21,12 +21,12 @@ def computepay(h,r):
     return gross_pay  
 
 #Can't quite figure out how to fix this while loop
-while (h < 0) or (r < 0):
+#while (h < 0) or (r < 0):
    
-    #for i in range(0,3):
-        attempts = attempts + 1
+for attempts in range(1,4):
+        #attempts = attempts + 1
         try:
-            hrs = raw_input("Enter Hours:")
+            hrs = raw_input("\n\nEnter Hours:")
             h = float(hrs)
             if (h < 0):     
                if (attempts > 2):
@@ -37,14 +37,15 @@ while (h < 0) or (r < 0):
                    continue
                    #break 	 
 
-            rate = raw_input("Enter Rate:")
+            rate = raw_input("\n\nEnter Rate:")
             r = float(rate)    
             if (r < 0):
                if (attempts > 2):stop()
                else:
                    print "Please enter a number 0 or greater"
                    continue
-                   #break
+            else:
+                break  #we have satisfied all our conditions we do not need to go through the loop again
 
         except: 	
               h = -1
